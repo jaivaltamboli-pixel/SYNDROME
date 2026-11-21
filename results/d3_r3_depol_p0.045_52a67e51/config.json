@@ -1,0 +1,22 @@
+{
+  "schema_version": "v3.0_depol_xz_corr_edges",
+  "noise_mode": "depolarizing",
+  "distance": 3,
+  "rounds": 3,
+  "p_x": 0.015,
+  "p_y": 0.015,
+  "p_z": 0.015,
+  "p_meas": 0.015,
+  "train_val_shots": 150000,
+  "val_fraction": 0.15,
+  "holdout_shots": 100000,
+  "train_seed": 42,
+  "holdout_seed": 2026,
+  "hidden_dim": 64,
+  "num_layers": 4,
+  "dropout": 0.1,
+  "batch_size": 256,
+  "epochs": 25,
+  "lr": 0.002,
+  "weight_decay": 0.0001
+}

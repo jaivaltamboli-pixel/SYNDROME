@@ -1,0 +1,25 @@
+{
+  "full_routing": {
+    "mwpm_ler": 0.11179,
+    "syndrome_ler": 0.09553,
+    "rel_ler_reduction_pct": 14.545129260220053,
+    "tp": 3856,
+    "fp": 2230,
+    "net": 1626,
+    "mcnemar_p": 1.6316306127174222e-97,
+    "routing_rate": 0.82631,
+    "total_us": 1083.9764339299927
+  },
+  "infer_gap_gated": {
+    "mwpm_ler": 0.11179,
+    "syndrome_ler": 0.09527,
+    "rel_ler_reduction_pct": 14.777708202880408,
+    "tp": 3627,
+    "fp": 1975,
+    "net": 1652,
+    "mcnemar_p": 2.0581350594737428e-109,
+    "routing_rate": 0.22634,
+    "total_us": 379.0579245800018
+  },
+  "mwpm_us": 6.694692549999672
+}

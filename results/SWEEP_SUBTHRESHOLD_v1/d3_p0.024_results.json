@@ -1,0 +1,28 @@
+{
+  "distance": 3,
+  "total_p": 0.024,
+  "holdout_shots": 100000,
+  "override_threshold": 0.45,
+  "val_max_prob": 0.7769655585289001,
+  "vanilla_ler": 0.03488,
+  "vanilla_ci": [
+    0.0337605537806746,
+    0.036035180946380134
+  ],
+  "corr_mwpm_ler": 0.03351,
+  "corr_mwpm_ci": [
+    0.03241236838218957,
+    0.03464347160066164
+  ],
+  "syndrome_ler": 0.0297,
+  "syndrome_ci": [
+    0.028665758080308332,
+    0.030770374621217806
+  ],
+  "rel_vs_vanilla_pct": 14.850917431192661,
+  "rel_vs_corr_pct": 11.369740376007154,
+  "tp_vs_corr": 1181,
+  "fp_vs_corr": 800,
+  "mcnemar_p_vs_corr": 1.0913346769307157e-17,
+  "routing_rate": 0.3192
+}

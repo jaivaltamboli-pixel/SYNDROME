@@ -1,0 +1,27 @@
+{
+  "holdout_shots": 100000,
+  "override_threshold": 0.45,
+  "gap_cutoff": 2.3851725867022138,
+  "mwpm_ler": 0.09973,
+  "mwpm_ci_95": [
+    0.09788816233465567,
+    0.10160259002860156
+  ],
+  "syndrome_ler": 0.09576,
+  "syndrome_ci_95": [
+    0.09395164391654678,
+    0.09759941345803314
+  ],
+  "relative_ler_reduction_pct": 3.9807480196530647,
+  "successful_overrides_tp": 3578,
+  "harmful_overrides_fp": 3181,
+  "net_errors_fixed": 397,
+  "mcnemar_p_value": 1.4495461017639088e-06,
+  "routing_rate": 0.20893,
+  "low_10pct_gap_mwpm_ler": 0.4419116176764647,
+  "low_10pct_gap_syndrome_ler": 0.3889222155568886,
+  "latency_mwpm_batch_us": 1.181344540000282,
+  "latency_comp_gap_us": 8.009441090007385,
+  "latency_graph_build_us": 77.2456995399989,
+  "latency_gnn_infer_us": 17.377603149998322
+}

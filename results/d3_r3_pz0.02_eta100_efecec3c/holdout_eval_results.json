@@ -1,0 +1,28 @@
+{
+  "holdout_shots": 100000,
+  "override_threshold": 0.5,
+  "mwpm_ler": 0.05195,
+  "mwpm_ci_95": [
+    0.05059161809690003,
+    0.05334280515829621
+  ],
+  "syndrome_ler": 0.05162,
+  "syndrome_ci_95": [
+    0.050265767363514305,
+    0.05300868124526793
+  ],
+  "relative_ler_reduction_pct": 0.6352261790182943,
+  "successful_overrides_tp": 427,
+  "harmful_overrides_fp": 394,
+  "net_errors_fixed": 33,
+  "mcnemar_p_value": 0.2640646374175432,
+  "boundary_routing_rate": 0.4704,
+  "low_10pct_gap_mwpm_ler": 0.2795321637426901,
+  "low_10pct_gap_syndrome_ler": 0.27656320287899233,
+  "latency_mwpm_batch_us": 0.7293005299993638,
+  "latency_comp_gap_us": 5.813269749999108,
+  "latency_graph_build_us": 115.78252795000026,
+  "latency_gnn_infer_us": 14.824692649999633,
+  "train_seconds": 124.06627703699996,
+  "peak_gpu_mb": 74.017578125
+}

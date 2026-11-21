@@ -1,0 +1,86 @@
+{
+  "selected_threshold": 0.5,
+  "best_val_net_gain": 41,
+  "sweep": [
+    {
+      "threshold": 0.4,
+      "flips": 851,
+      "tp_fixed": 418,
+      "fp_broken": 433,
+      "net_gain": -15,
+      "precision": 0.491186839012926
+    },
+    {
+      "threshold": 0.45,
+      "flips": 558,
+      "tp_fixed": 284,
+      "fp_broken": 274,
+      "net_gain": 10,
+      "precision": 0.5089605734767025
+    },
+    {
+      "threshold": 0.5,
+      "flips": 185,
+      "tp_fixed": 113,
+      "fp_broken": 72,
+      "net_gain": 41,
+      "precision": 0.6108108108108108
+    },
+    {
+      "threshold": 0.55,
+      "flips": 13,
+      "tp_fixed": 6,
+      "fp_broken": 7,
+      "net_gain": -1,
+      "precision": 0.46153846153846156
+    },
+    {
+      "threshold": 0.6,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    },
+    {
+      "threshold": 0.65,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    },
+    {
+      "threshold": 0.7,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    },
+    {
+      "threshold": 0.75,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    },
+    {
+      "threshold": 0.8,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "flips": 0,
+      "tp_fixed": 0,
+      "fp_broken": 0,
+      "net_gain": 0,
+      "precision": 0.0
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "v2.0_matcher_edges_1hop_norm_t",
+  "distance": 3,
+  "rounds": 3,
+  "p_z": 0.02,
+  "eta": 100.0,
+  "p_meas_ratio": 0.5,
+  "train_val_shots": 150000,
+  "val_fraction": 0.15,
+  "holdout_shots": 100000,
+  "train_seed": 42,
+  "holdout_seed": 2026,
+  "hidden_dim": 64,
+  "num_layers": 4,
+  "dropout": 0.1,
+  "batch_size": 256,
+  "epochs": 25,
+  "lr": 0.002,
+  "weight_decay": 0.0001
+}
