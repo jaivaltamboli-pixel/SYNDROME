@@ -68,7 +68,7 @@ All benchmarks evaluate **100,000 fresh holdout shots** (`seed=2026`) on Stim `s
 
 ### 2. SYNDROME-on-Vanilla & Complementary Gap ($\Delta W$) Ablation ($p = 0.045$)
 
-| Configuration | Vanilla LER | SYNDROME LER | Relative Gain | Routing Rate | Total Latency ($\mu$s/shot) | McNemar $p$ |
+| Configuration | Vanilla LER | SYNDROME LER | Relative Gain | Routing Rate | Total Latency| McNemar $p$ |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **$d=3$, X-Boundary (No $\Delta W$ in training)** | `0.09973` | **`0.09130`** | **`+8.45%`** | `49.8%` | `214.6` | `3.07e-42` |
 | **$d=3$, $\Delta W$ Fed During Training (Ablation)** | `0.09973` | `0.09576` | `+3.98%` *(shortcut learning)* | `20.9%` | `102.6` | `1.45e-06` |
@@ -120,7 +120,7 @@ pip install stim pymatching torch torch-geometric scipy matplotlib numpy
 - [x] Localized virtual boundary node representation for open-boundary rotated surface codes
 - [x] Inference-time $\Delta W$ gating ablation (`2.86×` speedup at $d=5$)
 - [x] Statistically significant beat over 2-pass Correlated MWPM at $d=3$ and $d=5$
-- [ ] Complete $d=5$ sub-threshold sweep ($p = 0.024, 0.033$) and publish error-suppression factor ($\Lambda = \text{LER}_{d=3}/\text{LER}_{d=5}$) curve
+- [ ] Complete $d=5$ sub-threshold sweep ($p = 0.024, 0.033$) and publish error-suppression factor curve
 - [ ] Extend to $d=7$ and tailored biased-noise XZZX surface codes
 
 ---
