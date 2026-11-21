@@ -81,6 +81,9 @@ Under strongly $Z$-biased noise on a standard CSS `rotated_memory_x` circuit (wh
 
 ---
 
+![SYNDROME Sub-Threshold Scaling](results/figures/sweep_progress_loglog.png)
+![SYNDROME Gain Over 2-Pass Correlated MWPM](results/figures/gain_vs_corrmwpm.png)
+
 ## Repository Structure
 
 ```text
