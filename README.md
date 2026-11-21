@@ -11,7 +11,7 @@
 
 ## Core Contributions
 
-1. **Matching-as-Input Validity Arbitration:** Instead of predicting edge weights for Blossom or decoding from raw syndromes alone, SYNDROME ingests the exact candidate matching returned by PyMatching (or 2-pass Correlated MWPM) alongside unchosen physical and $X$–$Z$ correlation edges, learning to detect boundary coset degeneracies and Pass-1 correlation errors.
+1. **Matching-as-Input Validity Arbitration:** Instead of predicting edge weights for Blossom or decoding from raw syndromes alone, SYNDROME ingests the exact candidate matching returned by PyMatching (or 2-pass Correlated MWPM) alongside unchosen physical and $X	ext{–}Z$ correlation edges, learning to detect boundary coset degeneracies and Pass-1 correlation errors.
 2. **Localized Virtual Boundary Nodes (Open-Boundary Planar Geometry):** Connecting all perimeter detectors to a single global virtual boundary node causes severe message-passing over-squashing. SYNDROME instantiates dedicated local virtual boundary nodes displaced by `1.0` normalized grid unit along the outward normal vector of each boundary-capable detector, preserving spatial locality across code distances ($d=3, 5$).
 3. **Inference-Time Complementary Gap ($\Delta W$) Gating:** Controlled ablations reveal that concatenating Gidney's Complementary Gap ($\Delta W = \vert{}W_1 - W_0\vert{}$) *during training* induces shortcut learning and cuts LER gains in half (`+3.98%` vs. `+8.45%` at $d=3$). Training *without* $\Delta W$ and gating *strictly at inference time* (`q25`) reduces GNN invocations from **`82.6%` to `22.6%`** at $d=5$ (**`2.86×` speedup**) while *improving* Logical Error Rate (`+14.78%` vs. `+14.55%`).
 4. **Statistically Significant Gains Over 2-Pass Correlated MWPM:** Stacking SYNDROME on top of Bayesian 2-pass Correlated MWPM yields statistically significant LER reductions across both $d=3$ (up to **`+11.98%`** over CorrMWPM sub-threshold, $p = 1.91 \times 10^{-39}$) and $d=5$ (**`+1.29%`** over CorrMWPM / **`+16.79%`** over Vanilla PyMatching at $p=0.045$, $p = 2.87 \times 10^{-3}$).
@@ -44,7 +44,7 @@ Calibrated P(MWPM fails | S, M) >= τ  ──► Flip Logical Observable Predict
 ### Graph Representation
 
 - **Node Features (7-dim):** Normalized spacetime coordinates `(x, y, t)`, `is_lit`, `is_virtual_boundary`, `is_boundary_capable`, and `is_x_component`.
-- **Edge Features (6-dim):** Original DEM log-likelihood weight `w`, Pass-2 Bayesian reweighting shift `Δw`, `crosses_logical`, `is_chosen` (by MWPM), `is_boundary_edge`, and `is_corr_edge` ($X$–$Z$ $Y$-error correlation).
+- **Edge Features (6-dim):** Original DEM log-likelihood weight `w`, Pass-2 Bayesian reweighting shift `Δw`, `crosses_logical`, `is_chosen` (by MWPM), `is_boundary_edge`, and `is_corr_edge` ($X	ext{–}Z$ $Y$-error correlation).
 - **Readout Stability:** A `LayerNorm(2 * hidden_dim)` layer precedes the final MLP over `[global_add_pool, global_mean_pool]` to prevent additive pooling magnitude explosion and dead-neuron saturation on larger $d=5$ graphs.
 - **Calibration & Zero Leakage:** Models are trained with unweighted `BCEWithLogitsLoss` on a disjoint training split; the override threshold $\tau$ is selected strictly on a held-out validation split before touching the separately seeded (`seed=2026`) 100,000-shot holdout set.
 
@@ -77,7 +77,7 @@ All benchmarks evaluate **100,000 fresh holdout shots** (`seed=2026`) on Stim `s
 
 ### 3. Biased-Noise Control Experiment ($d=3, \eta=100, p_Z=0.02$)
 
-Under strongly $Z$-biased noise on a standard CSS `rotated_memory_x` circuit (where $Y$-error $X$–$Z$ correlations are suppressed by $100\times$), SYNDROME produced a clean null result (`0.05195` $\rightarrow$ `0.05162`, `+0.64%`, $p = 0.2641$), confirming that standalone MWPM already operates near the exact Maximum-Likelihood limit on a $3 \times 3$ CSS lattice without $X$–$Z$ correlations.
+Under strongly $Z$-biased noise on a standard CSS `rotated_memory_x` circuit (where $Y$-error $X	ext{–}Z$ correlations are suppressed by $100\times$), SYNDROME produced a clean null result (`0.05195` $\rightarrow$ `0.05162`, `+0.64%`, $p = 0.2641$), confirming that standalone MWPM already operates near the exact Maximum-Likelihood limit on a $3 \times 3$ CSS lattice without $X	ext{–}Z$ correlations.
 
 ---
 
